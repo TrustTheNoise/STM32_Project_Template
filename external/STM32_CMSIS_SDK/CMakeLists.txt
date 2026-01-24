@@ -1,0 +1,12 @@
+add_library(stm32_sdk INTERFACE)
+
+if(CMSIS_Dname MATCHES "^STM32F1")
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stm32f1_sdk)
+    target_link_libraries(stm32_sdk INTERFACE stm32f1_sdk)
+elseif(CMSIS_Dname MATCHES "^STM32F4")
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stm32f4_sdk)
+    target_link_libraries(stm32_sdk INTERFACE stm32f4_sdk)
+elseif(CMSIS_Dname MATCHES "^STM32G4")
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stm32g4_sdk)
+    target_link_libraries(stm32_sdk INTERFACE stm32g4_sdk)
+endif()
