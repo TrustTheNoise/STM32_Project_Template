@@ -14,12 +14,6 @@
  
  cmake_minimum_required(VERSION 3.20)
 
-#
-# This file is generated only once, and is not re-generated.
-#
-# User is free to modify the file as much as necessary
-#
-
 # Core project settings
 project("stm32_project_template")   # [CHANGE] change to your project name 
 enable_language(C CXX ASM)
